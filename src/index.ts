@@ -1,10 +1,14 @@
 export { default as App } from './App';
+export * from './components/atomos/Title';
 export * from './components/templates/HomeTemplate';
 export * from './components/templates/LoginTemplate';
+export { default as declarations.d } from './declarations.d';
+export * from './env.d';
 export * from './main';
 export * from './pages/Home';
 export * from './pages/Login';
 export * from './routers/routes';
+export * from './styles/breakpoints';
 export * from './styles/themes';
+export * from './styles/variables';
 export * from './supabase/supabase.config';
-export * from './vite-env.d';

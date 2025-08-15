@@ -1,6 +1,6 @@
-import { styled, ThemeProvider } from "styled-components"
+import { ThemeProvider, createGlobalStyle } from "styled-components"
 import { createContext, useState } from "react"
-import { Light, Dark, Home } from "./index"
+import { Light, Dark, Login } from "./index"
 
 // Define el tipo para el contexto
 type ThemeContextType = {
@@ -20,9 +20,9 @@ function App() {
  
   return (
     <ThemeContext.Provider value={{setTheme, theme}}>
-      <ThemeProvider theme={themeStyle} >
-        <h1>Spider Ad - faucet, ptc, autosurf and more</h1>
-        <Home />
+      <ThemeProvider theme={themeStyle} >                
+        <GlobalStyle />
+        <Login />
       </ThemeProvider>
     </ThemeContext.Provider>
   )
@@ -30,6 +30,18 @@ function App() {
 
 export default App
 
-const Container = styled.div`
+// const Container = styled.div`
+//   margin: 0;
+// `
 
-`
+const GlobalStyle = createGlobalStyle`
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    height: 100%;
+  }
+`;
