@@ -22,9 +22,9 @@ export function LoginTemplate({ children }: HomeTemplateProps) {
       </ContentLogo>
       <ContentForm>
         <Title $padding-bottom="20px" $color="black" >Ingresar</Title>
-        <Form>
+        {/* <Form>
           
-        </Form>
+        </Form> */}
       </ContentForm>
       
 
